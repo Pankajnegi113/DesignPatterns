@@ -1,7 +1,7 @@
 package com.java.design.pattern.main;
 
 enum ShapeType{
-    Circle,Rectangle,Square;
+    CIRCLE,RECTANGLE,SQUARE;
 }
 
 interface Shape{
@@ -32,11 +32,11 @@ class Rectangle implements Shape{
 class ShapeFactory{
     public Shape getShape(ShapeType shapeType){
         switch(shapeType){
-            case Circle:
+            case CIRCLE:
                 return new Circle();
-            case Rectangle:
+            case RECTANGLE:
                 return new Rectangle();
-            case Square:
+            case SQUARE:
                 return new Square();
             default:
                 return null;
@@ -53,9 +53,9 @@ public class Factory {
     public static void main(String[] args) {
 
         ShapeFactory shapeFactory = new ShapeFactory();
-        shapeFactory.getShape(ShapeType.Circle).draw();
-        shapeFactory.getShape(ShapeType.Rectangle).draw();
-        shapeFactory.getShape(ShapeType.Square).draw();
+        shapeFactory.getShape(ShapeType.CIRCLE).draw();
+        shapeFactory.getShape(ShapeType.RECTANGLE).draw();
+        shapeFactory.getShape(ShapeType.SQUARE).draw();
 
     }
 }
