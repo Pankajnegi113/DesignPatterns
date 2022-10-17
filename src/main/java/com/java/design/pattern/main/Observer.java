@@ -48,7 +48,6 @@ class Bitcoin implements Subject{
             observer.update(newBitcoinPrice);
         }
     }
-
     public void changeInPrice(int newBitcoinPrice){
         System.out.println();
         System.out.println("Bitcoin new Price: "+newBitcoinPrice);
